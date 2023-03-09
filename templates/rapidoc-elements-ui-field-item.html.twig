@@ -1,0 +1,51 @@
+{#
+/**
+ * @file rapidoc-elements-ui-field-item.html.twig
+ * Default theme implementation for Rapidoc UI field items.
+ *
+ * Available variables:
+ * - field_name: The name of the field.
+ * - delta: The delta of the field item.
+ *
+ * @ingroup themeable
+ */
+#}
+<div id="rapidoc-elements-ui-{{ field_name }}-{{ delta }}" style="height:fit-content !important">
+  <rapi-doc
+    spec-url="{{ file_url }}"
+    sort-tags="false"
+    sort-endpoints-by="path"
+    show-header="false"
+    theme="light"
+    primary-color="#ACDD22"
+    bg-color="#FFFFFF"
+    nav-bg-color="#183346"
+    nav-text-color="#F7F7F7"
+    font-size="large"
+    regular-font="Poppins"
+    nav-item-spacing="default"
+    allow-spec-url-load="false"
+    allow-spec-file-load="false"
+    render-style="focus"
+    nav-active-item-marker="colored-block"
+    show-info="true"
+    allow-authentication="true"
+    allow-try="true"
+    persist-auth="false"
+    allow-search="true"
+    allow-advanced-search="true"
+    show-components="true"
+    use-path-in-nav-bar="false"
+    show-method-in-nav-bar="as-colored-block"
+    default-schema-tab="model"
+    schema-style="table"
+    schema-expand-level="1"
+    schema-hide-read-only="default"
+    schema-description-expanded="true"
+    allow-schema-description-expand-toggle="false"
+    fill-request-fields-with-example="false"
+    layout="row" allow-try="true"
+    show-curl-before-try="true"
+    response-area-height="200px"
+  />
+</div>

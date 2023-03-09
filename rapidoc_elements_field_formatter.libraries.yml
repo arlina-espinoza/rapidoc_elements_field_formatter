@@ -1,0 +1,4 @@
+rapidoc_elements_field_formatter.rapidoc:
+  version: 1.0
+  js:
+    https://unpkg.com/rapidoc/dist/rapidoc-min.js: { type: external, minified: true }

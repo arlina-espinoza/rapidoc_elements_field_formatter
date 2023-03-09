@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * The rapidoc_elements_field_formatter module.
+ */
+
+ use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rapidoc_elements_field_formatter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.rapidoc_elements_field_formatter':
+      $output = '';
+      // Add a link to the Drupal.org project.
+      $output .= '<p>';
+      $output .= t('Visit the <a href=":project_link">project page</a> on Drupal.org for more information.', [
+        ':project_link' => 'https://www.drupal.org/project/rapidoc_elements_field_formatter',
+      ]);
+      $output .= '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rapidoc_elements_field_formatter_theme($existing, $type, $theme, $path) {
+  return [
+    'rapidoc_elements_ui_field_item' => [
+      'variables' => [
+        'field_name' => NULL,
+        'delta' => NULL,
+        'file_url' => NULL,
+      ],
+    ],
+  ];
+}

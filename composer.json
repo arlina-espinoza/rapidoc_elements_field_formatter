@@ -1,0 +1,9 @@
+{
+    "name": "drupal/rapidoc_elements_field_formatter",
+    "description": "RapiDoc Elements Field Formatter",
+    "type": "drupal-module",
+    "require": {
+        "php": ">=7.4",
+        "drupal/core": "^8 || ^9 || ^10"
+    }
+}
