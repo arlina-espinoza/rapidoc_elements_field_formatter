@@ -62,6 +62,7 @@ class RapiDocElementsUIFormatter extends FileFormatterBase {
       $element[$delta] = [
         '#theme' => 'rapidoc_elements_ui_field_item',
         '#field_name' => $this->fieldDefinition->getName(),
+        '#entity' => $items->getEntity(),
         '#delta' => $delta,
         '#file_url' => $rapidoc_file,
       ];

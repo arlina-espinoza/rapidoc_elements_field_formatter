@@ -33,6 +33,7 @@ function rapidoc_elements_field_formatter_theme($existing, $type, $theme, $path)
       'variables' => [
         'field_name' => NULL,
         'delta' => NULL,
+        'entity' => NULL,
         'file_url' => NULL,
       ],
     ],
