@@ -71,30 +71,4 @@ class RapiDocElementsUILinkFormatter extends LinkFormatter {
     return $element;
   }
 
-  /**
-   * Builds the \Drupal\Core\Url object for a link field item.
-   *
-   * @param \Drupal\link\LinkItemInterface $item
-   *   The link field item being rendered.
-   *
-   * @return \Drupal\Core\Url
-   *   A Url object.
-   */
-  protected function buildUrl(LinkItemInterface $item) {
-    $url = $item->getUrl() ?: Url::fromRoute('<none>');
-    $settings = $this->getSettings();
-    $options = $item->options;
-    $options += $url->getOptions();
-    // Add optional 'rel' attribute to link options.
-    if (!empty($settings['rel'])) {
-      $options['attributes']['rel'] = $settings['rel'];
-    }
-    // Add optional 'target' attribute to link options.
-    if (!empty($settings['target'])) {
-      $options['attributes']['target'] = $settings['target'];
-    }
-    $url->setOptions($options);
-    return $url;
-  }
-
 }
